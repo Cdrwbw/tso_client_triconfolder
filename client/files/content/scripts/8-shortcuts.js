@@ -140,10 +140,10 @@ function shortcutsMenuSelectedHandler(event)
 	shortcutsMenuSelectedRetryHandler(event.target.name, 0);
 }
 
-function shortcutsMenuSelectedRetryHandler(file, count)
+function shortcutsMenuSelectedRetryHandler(file_path, count)
 {
 	try {
-		var filetype = shortcutsStripType(file);
+		var filetype = shortcutsStripType(file_path);
 		var file = new air.File(filetype[0]);
 		if(!file.exists) {
 			alert(getText("bad_template") + '(not exists)');
@@ -156,10 +156,12 @@ function shortcutsMenuSelectedRetryHandler(file, count)
 		if (data == "") { return; }
 		shortcutsProceedFile(JSON.parse(data), filetype[1], file.name, filetype[0]);
 	} catch(e) {
+		debug(e);
 		if(count > 3) {
 			alert(getText("bad_template") + '(retry)');
 		} else {
-			shortcutsMenuSelectedRetryHandler(file, ++count);
+			
+			shortcutsMenuSelectedRetryHandler(file_path, ++count);
 		}
 	}
 }
