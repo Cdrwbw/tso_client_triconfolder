@@ -151,9 +151,9 @@ function battleSendGeneral(spec, name, targetName, type, target)
 		stask.uniqueID = spec.GetUniqueID();
 		stask.subTaskID = 0;
 		swmmo.application.mGameInterface.SendServerAction(95, type, target, 0, stask);
-		//game.chatMessage(Date.now()+' '+name.replace(/(<([^>]+)>)/gi, "") + (type == 5 ? ' x ' : ' > ') + targetName, 'battle');
+		game.chatMessage("({0}/{1}) {2} {3} {4}".format(battleTimedQueue.index, battleTimedQueue.len() - 1, name.replace(/(<([^>]+)>)/gi, ""), (type == 5 ? ' x ' : ' > '), targetName), 'battle');
 	}
-	catch (error) { }
+	catch (error) { debug(error); }
 }
 
 function battleLoadDataCheck(data)
@@ -262,6 +262,7 @@ function battleAttack(direct)
 		battleTimedQueue.add(function(){ battleSendGeneral(spec, battlePacket[item].name, battlePacket[item].targetName, 5, battlePacket[item].target); }, battlePacket[item].time);
 	});
 	if(battleTimedQueue.len() > 0) {
+		battleTimedQueue.add(function(){ game.showAlert(loca.GetText("LAB", "GuildQuestCompleted")); });
 		battleTimedQueue.run();
 		if(!direct) { battleWindow.hide(); }
 		showGameAlert(getText('command_sent'));
@@ -282,6 +283,7 @@ function battleMove(direct)
 		}
 	});
 	if(battleTimedQueue.len() > 0) {
+		battleTimedQueue.add(function(){ game.showAlert(loca.GetText("LAB", "GuildQuestCompleted")); });
 		battleTimedQueue.run();
 		if(!direct) { battleWindow.hide(); }
 		showGameAlert(getText('command_sent'));
@@ -301,6 +303,7 @@ function battleAttackDirect()
 		}
 	});
 	if(battleTimedQueue.len() > 0) {
+		battleTimedQueue.add(function(){ game.showAlert(loca.GetText("LAB", "GuildQuestCompleted")); });
 		battleTimedQueue.run();
 		battleWindow.hide();
 		showGameAlert(getText('command_sent'));
