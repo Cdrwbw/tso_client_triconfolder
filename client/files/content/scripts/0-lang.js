@@ -582,7 +582,11 @@ const baseTranslation = {
 		"highlight_desc": "Surbrillance collectibles",
 		"highlightColor_desc": "couleur intérieure boule",
 		"highlightGlow_desc": "Couleur extérieure boule",
-		"highlight_reboot": "Redémarrage requis"
+		"highlight_reboot": "Redémarrage requis",
+		"chatpanelwidth_desc": "Largeur fenetre tchat",
+		"chatfontsize_desc": "Taille caractère tchat",
+		"starmenurows_desc": "Nbre lignes menu étoile",
+		"starmenucols_desc": "Nbre colonne menu étoile"
 	},
 	'es-es': {
 		'btn_submit': 'Enviar',
