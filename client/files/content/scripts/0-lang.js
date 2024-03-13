@@ -157,7 +157,9 @@ const baseTranslation = {
 		"newschattrigger_desc" : "News chat trigger",
 		"customwordsnewschannel_desc" : "Custom words news channel",
 		"groupchatmentiontrigger_desc" : "Group chat mention trigger",
-		"customwordstrigger_desc" : "Custom words trigger"
+		"customwordstrigger_desc" : "Custom words trigger",
+		// new translation
+		"showmembersguild_desc" : "Show only online guild members"
 	},
 	'ru-ru': {
 		'btn_submit': 'Отправить',
@@ -609,7 +611,9 @@ const baseTranslation = {
 		"newschattrigger_desc" : "nouveau déclencheur de chat",
 		"customwordsnewschannel_desc" : "mot personalisé nouveau canal",
 		"groupchatmentiontrigger_desc" : "Déclencheur mention de groupe de chat",
-		"customwordstrigger_desc" : "Mots déclencheurs"
+		"customwordstrigger_desc" : "Mots déclencheurs",
+		// new translation
+		"showmembersguild_desc" : "Membres actifs de la guilde"
 	},
 	'es-es': {
 		'btn_submit': 'Enviar',
