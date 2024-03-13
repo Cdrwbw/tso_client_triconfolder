@@ -54,5 +54,26 @@
       "longDesc":"Simple script to show used building licenses",
       "author":"SirriS",
 	  "url": "https://github.com/fedorovvl/tso_client/discussions/36#discussioncomment-3834537"
+   },
+   "user_building_expansion.js":{
+      "name":"Building expansion",
+      "shortDesc":"Building expansion",
+      "longDesc":"Building expansion via templates with load and save function, as well as a friendly UI with max level limit for expansion",
+      "author":"PiTi_TestSiedler",
+	  "url": ""
+   },
+   "user_zoneBuff.js":{
+      "name":"ZoneBuffs",
+      "shortDesc":"ZoneBuffs",
+      "longDesc":"ZoneBuffs via templates with load and save function, as well as a friendly UI",
+      "author":"PiTi_TestSiedler",
+	  "url": ""
+   },
+   "user_mine_rebuild.js":{
+      "name":"MinesRebuild",
+      "shortDesc":"MinesRebuild",
+      "longDesc":"Mines can be rebuild via templates with load and save function, as well as a friendly UI",
+      "author":"PiTi_TestSiedler",
+	  "url": ""
    }
 }

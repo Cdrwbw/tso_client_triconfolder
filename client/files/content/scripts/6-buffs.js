@@ -49,7 +49,7 @@ function menuBuffsHandler(event)
 		out += $('<button>', { 'class': 'btn btn-primary btn-lg btn-block', 'id': 'stopRecording' }).text(getText('buff_stop_record')).prop('outerHTML');
 	}
 	if(!buffRecordEnabled && buffRecord != null) {
-		buffVector = game.getBuffs();
+		buffVector = game.gi.mCurrentPlayer.getAvailableBuffs_vector();
 		out += getBuffHTML() + getBuffsAvailableHTML() + '<br><button type="button" class="btn btn-primary btn-lg btn-block" id="startRecording">' + getText('buff_record_more') + '</button>';
 		if(buffRecordFiltered.length > 0){
 			$('.buffSubmit').attr('disabled', false);
@@ -169,9 +169,9 @@ function buffApliedHandler(event){
 		var zoneUser = game.player.GetPlayerName_string();
 		if(game.gi.isOnHomzone() == false) {
 			try{
-				zoneUser = globalFlash.gui.mFriendsList.GetFriendById(swmmo.application.mGameInterface.mCurrentViewedZoneID).username;
+				zoneUser = globalFlash.gui.mFriendsList.GetFriendById(game.gi.mCurrentViewedZoneID).username;
 			} catch(e) {
-				zoneUser = globalFlash.gui.mFriendsList.GetGuildMemberById(swmmo.application.mGameInterface.mCurrentViewedZoneID).username;
+				zoneUser = globalFlash.gui.mFriendsList.GetGuildMemberById(game.gi.mCurrentViewedZoneID).username;
 			}
 		}
 		buffRecord = { 
