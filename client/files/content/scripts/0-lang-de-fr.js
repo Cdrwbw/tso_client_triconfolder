@@ -362,6 +362,5 @@ extendBaseLang({
 		"managerModal_help": "Main-info#tools",
 		"feedbackWindow_help": "Main-info",
 		"nondefault_help": "User-scripts-description"
-		
 	}
 });
